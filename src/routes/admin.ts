@@ -4,6 +4,10 @@ import { AdminController } from "../controllers/admin";
 const router  = Router({mergeParams:true})
 const  controller = new AdminController()
 
-router.route("/login").post(controller.adminLogin)
+
+router.route("/").post(controller.create)
+router
+    .route("/:id")
+    .post(controller.create)
 
 export default router 

@@ -54,10 +54,8 @@ const uploadd = multer({
 
 const router = Router({mergeParams:true})
 
-// router.use("/teachers", upload.single("photo"),TeacherRouter)
+
 router.use("/person", PersonRouter)
-// router.use("/abiturent", uploadd.single('docx'),AbiturentRouter)
-// router.use("/gallery", upload.single("photo"),GalleryRouter)
 router.use("/admin", AdminRouter)
 
 export default router
