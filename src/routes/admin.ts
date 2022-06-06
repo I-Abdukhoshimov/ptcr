@@ -5,7 +5,7 @@ const router  = Router({mergeParams:true})
 const  controller = new AdminController()
 
 
-router.route("/").post(controller.create)
+router.route("/").get(controller.getAll).post(controller.create)
 router
     .route("/:id")
     .post(controller.create)

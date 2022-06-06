@@ -39,5 +39,27 @@ export class AdminController{
             }
         })
     })
+
+    getAll= catchAsync(async(req:Request,res:Response,next:NextFunction)=>{
+        const person = await storage.person.find(req.query)
+
+        res.status(200).json({
+            success:true,
+            data:{
+                person
+            }
+        })
+    })
+
+    getOne = catchAsync(async(req:Request,res:Response,next:NextFunction)=>{
+        const person = await storage.person.findOne(req.body)
+
+        res.status(200).json({
+            success:true,
+            data:{
+                person
+            }
+        })
+    })
     
 }

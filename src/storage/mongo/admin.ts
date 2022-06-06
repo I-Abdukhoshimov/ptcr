@@ -30,4 +30,15 @@ export class AdminStorage {
             throw error
         }
     }
+
+    async find(query:Object):Promise<IAdmin[]>{
+        try{
+            let dbobj = await admin.find({...query})
+            
+            return dbobj
+        }catch(error){
+            logger.error(`${this.scope}.find: finished with error: ${error}`)
+            throw error
+        }
+    }
 }
