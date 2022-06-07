@@ -25,6 +25,9 @@ let personSchema = new mongoose.Schema({
     },
     analysDate:{
         type:String,
+    },
+    gender:{
+        type:String
     }
 })
 

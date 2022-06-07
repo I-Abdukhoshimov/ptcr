@@ -17,7 +17,7 @@ interface Config{
 let config: Config = {
     HttpPort: getConf("PORT", "3000"),
     MongoHost: getConf("MONGO_HOST", "localhost"),
-    MongoPort: parseInt(getConf("MONGO_PORT", "mongodb+srv://ibro-tech:0141ikhtiyar@cluster0.sbzdj.mongodb.net/?retryWrites=true&w=majority")),
+    MongoPort: parseInt(getConf("MONGO_PORT", "27017")),
     MongoDatabase: getConf("MONGO_DATABASE", "pt"),
     MongoPassword: getConf("MONGO_PASSWORD", ""),
     MongoDbAtlasURI:getConf("MONGODB_URI",""),
