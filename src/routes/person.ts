@@ -4,6 +4,7 @@ import { PersonController } from "../controllers/person";
 const router  = Router({mergeParams:true})
 const  controller = new PersonController()
 
+// new comment
 router.route("/").get(controller.getAll).post(controller.create)
 router
     .route("/:id")
