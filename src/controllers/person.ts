@@ -27,7 +27,7 @@ export class PersonController{
         })
     })
 
-    create = catchAsync(async(req:Request,res:Response,next:NextFunction)=>{
+    create = catchAsync(async (req: Request, res: Response, next: NextFunction) => {
         const person = await storage.person.create({...req.body})
 
 
