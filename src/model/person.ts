@@ -13,21 +13,27 @@ export interface IPerson extends Document{
 let personSchema = new mongoose.Schema({
     name:{
         type:String,
+        required:true
     },
     dateOfBirth:{
        type:String,
+       required:true
     },
     Seria:{
         type:String,
+        required:true
     },
     CovidTest:{
         type:String,
+        required:true
     },
     analysDate:{
         type:String,
+        required:true
     },
     gender:{
-        type:String
+        type:String,
+        required:true
     }
 })
 
