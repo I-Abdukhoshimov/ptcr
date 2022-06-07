@@ -19,18 +19,6 @@ export class AdminStorage {
         }
     }
 
-    async create(payload: IAdmin): Promise<IAdmin> {
-        try {
-            let dbObj = await admin.create(payload)
-
-            return dbObj
-        } catch (error) {
-            console.log(error)
-            logger.error(`${this.scope}.create: finished with error: ${error}`)
-            throw error
-        }
-    }
-
     async find(query:Object):Promise<IAdmin[]>{
         try{
             let dbobj = await admin.find({...query})

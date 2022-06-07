@@ -28,19 +28,19 @@ function getMongoDBUrl(auth: boolean, dbInfo?: mongoDBInfo): string {
     }
     return config.MongoDbAtlasURI
 
-    // url =
-    //     "mongodb://" +
-    //     config.MongoUser +
-    //     ":" +
-    //     config.MongoPassword +
-    //     "@" +
-    //     config.MongoHost +
-    //     ":" +
-    //     config.MongoPort.toString() +
-    //     "/" +
-    //     config.MongoDatabase
+    url =
+        "mongodb://" +
+        config.MongoUser +
+        ":" +
+        config.MongoPassword +
+        "@" +
+        config.MongoHost +
+        ":" +
+        config.MongoPort.toString() +
+        "/" +
+        config.MongoDatabase
 
-    // return url
+    return url
 }
 export default class Database {
     url: string = getMongoDBUrl(false, {
