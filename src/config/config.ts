@@ -15,7 +15,7 @@ interface Config{
 }
 
 let config: Config = {
-    HttpPort: getConf("PORT", "3000"),
+    HttpPort: getConf("PORT", ""),
     MongoHost: getConf("MONGO_HOST", "localhost"),
     MongoPort: parseInt(getConf("MONGO_PORT", "27017")),
     MongoDatabase: getConf("MONGO_DATABASE", "pt"),
@@ -23,7 +23,7 @@ let config: Config = {
     MongoDbAtlasURI:getConf("MONGODB_URI",""),
     MongoUser: getConf("MONGO_USER", ""),
     NodeEnv: getConf("NODE_ENV", "development"),
-    MongoAuthDisable: true
+    MongoAuthDisable: false
 }
 
 function getConf(name: string, def: string = ""): string {
