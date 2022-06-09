@@ -31,23 +31,23 @@ export class AdminController{
 
    
     getAll= catchAsync(async(req:Request,res:Response,next:NextFunction)=>{
-        const person = await storage.person.find(req.query)
+        const admin = await storage.admin.find(req.query)
 
         res.status(200).json({
             success:true,
             data:{
-                person
+                admin
             }
         })
     })
 
     getOne = catchAsync(async(req:Request,res:Response,next:NextFunction)=>{
-        const person = await storage.person.findOne(req.body)
+        const admin = await storage.admin.findOne(req.body)
 
         res.status(200).json({
             success:true,
             data:{
-                person
+                admin
             }
         })
     })
