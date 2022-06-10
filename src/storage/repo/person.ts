@@ -9,5 +9,5 @@ export interface PersonRepo {
     create(payload:IPerson):Promise<IPerson>
     delete(id:string):Promise<any>
     find(query:Object):Promise<IPerson[]>
-    findOne(query:Object):Promise<IPerson>
+    findOne(id:Object):Promise<IPerson>
 }

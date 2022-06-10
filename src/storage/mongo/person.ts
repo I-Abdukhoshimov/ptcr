@@ -17,9 +17,9 @@ export class PersonStorage implements PersonRepo{
         }
     }
 
-    async findOne(query: Object): Promise<IPerson> {
+    async findOne(id: Object): Promise<IPerson> {
         try {
-            let dbObj = await Person.findOne({ ...query })
+            let dbObj = await Person.findOne({ ...id })
 
             if (!dbObj) {
                 logger.warn(`${this.scope}.get failed to findOne`)
