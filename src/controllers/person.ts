@@ -27,6 +27,18 @@ export class PersonController{
         })
     })
 
+    getById = catchAsync(async(req:Request,res:Response,next:NextFunction)=>{
+        const person = await storage.person.findById(req.body)
+
+        res.status(200).json({
+            success:true,
+            data:{
+                person
+            }
+        })
+    })
+
+
     create = catchAsync(async(req:Request,res:Response,next:NextFunction)=>{
         const person = await storage.person.create({...req.body})
 

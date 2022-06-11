@@ -10,4 +10,5 @@ export interface PersonRepo {
     delete(id:string):Promise<any>
     find(query:Object):Promise<IPerson[]>
     findOne(id:Object):Promise<IPerson>
+    findById(id: string): Promise<IPerson>
 }

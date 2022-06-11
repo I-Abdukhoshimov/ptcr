@@ -14,5 +14,6 @@ router
     .route("/:id")
     .delete(controller.delete)
     .post(controller.create)
+    .get(controller.getById)
 
 export default router 

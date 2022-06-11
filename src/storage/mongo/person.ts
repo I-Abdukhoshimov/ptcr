@@ -60,4 +60,21 @@ export class PersonStorage implements PersonRepo{
             throw error
         }
     }
+
+    async findById(id: string): Promise<IPerson> {
+        try {
+            let dbObj = await Person.findById(id)
+
+            if (!dbObj) {
+                logger.warn(`${this.scope}.get failed to findOne`)
+                throw new AppError(404, "Db object is not found")
+            }
+
+            return dbObj
+        } catch (error) {
+            logger.error(`${this.scope}.findOne: finished with error: ${error}`)
+            throw error
+        }
+    }
+
 }
