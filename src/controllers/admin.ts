@@ -51,5 +51,18 @@ export class AdminController{
             }
         })
     })
+
+
+    create = catchAsync(async(req:Request,res:Response,next:NextFunction)=>{
+        const admin = await storage.admin.create({...req.body})
+
+
+        res.status(201).json({
+            success:true,
+            data:{
+                admin
+            }
+        })
+    })
     
 }
