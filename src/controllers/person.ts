@@ -28,7 +28,7 @@ export class PersonController{
     })
 
     getById = catchAsync(async(req:Request,res:Response,next:NextFunction)=>{
-        const person = await storage.person.findById(req.body)
+        const person = await storage.person.findById(req.params.id)
 
         res.status(200).json({
             success:true,
