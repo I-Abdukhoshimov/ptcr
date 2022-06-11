@@ -12,8 +12,7 @@ const  controller = new PersonController()
 router.route("/").get(controller.getAll).post(controller.create)
 router
     .route("/:id")
-    .delete(controller.delete)
-    .post(controller.create)
     .get(controller.getById)
+    .delete(controller.delete)
 
 export default router 
