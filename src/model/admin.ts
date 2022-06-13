@@ -9,11 +9,11 @@ export interface IAdmin extends Document{
 let adminSchema = new mongoose.Schema({
     name:{
         type:String,
-        default:"admin"
+        default:"Shedevr-denta"
     },
     password:{
         type:String,
-        default:"qwerty1234"
+        default:"Shedevr-denta2022 "
     }
 })
 
