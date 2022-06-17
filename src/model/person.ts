@@ -34,9 +34,11 @@ let personSchema = new mongoose.Schema({
     gender:{
         type:String,
         required:true
+    },
+    createdAt:{
+        type:String,
+        required:true
     }
-},  {timestamps: {
-    createdAt:"createdAt",
-    updatedAt:"updatedAt"}})
+})
 
 export default mongoose.model<IPerson>("Person",personSchema)
